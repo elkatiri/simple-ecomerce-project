@@ -1,0 +1,306 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html{
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+button{
+  font-size: 0.8rem;
+  font-weight: 700;
+  border: none;
+  outline: none;
+  background-color: #1d1d1d;
+  padding: 13px 30px;
+  text-transform: uppercase;
+  color: aliceblue;
+  transition: .3s ease;
+  cursor: pointer;
+}
+button:hover{
+color: #fb774b;
+}
+.navbar{
+  font-size: 16px;
+}/*active for menu*/
+.act{
+  color: coral!important;
+}
+.navbar-nav .nav-item{
+  padding:0 20px;
+  color:black;
+  transition: 0.4s ease;
+}.navbar-nav .nav-item:hover .nav-link,.navbar i:hover{
+  color: coral;
+}
+.navbar i{
+  font-size:1.2rem;
+  cursor: pointer;
+  font-weight: 500;
+  transition: .3s ease;
+}.nav-item{
+  position: relative;
+}
+#favoritesCount {
+  background-color: #ff6347;
+  color: white;
+  padding: 4px 6px;
+  border-radius: 50%;
+  font-size: 12px;
+  position: absolute;
+  top: 0px;
+}
+/* start first section */
+/* Slideshow container */
+.section{
+  background-color:#f2f2f2;
+}
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+  height: 100vh;
+}
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  background-color: rgba(252, 251, 251, 0.8);
+  /* Added background color */
+}
+.prev:hover, .next:hover{
+  background-color: #fb774b;
+  color: #fff;
+}
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Added background color */
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: coral;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color:coral;
+}
+
+@media screen and (max-width: 769px) {
+    body>nav>div>button:hover,
+    body>nav>div>button:focus{
+      background-color:coral;
+    }#navbarSupportedContent>ul{
+      justify-content: flex-end;
+      align-items: flex-end;
+      margin: 1rem;
+    }
+    #navbarSupportedContent>ul>li:nth-child(n){
+      padding: 5px 0;
+    }
+    .next, .prev {
+      padding: 10px;
+      top: 52%;
+    }#favoritesList{
+      left: 6px;
+      max-height: 250px!important;
+      max-width: 304px;
+    }
+}
+@media screen and (max-width:426px) {
+  .card{
+    margin:0 auto!important;
+  }
+}
+/* cards */
+
+.special-head{
+  position: relative;
+}
+.special-head::after{
+  position: absolute;
+  content: "";
+  height: 3px;
+  border-radius: 6px;
+  width:20%;
+  left: 40%;
+  bottom:0;
+  background-color: coral;
+}
+.card-img-top{
+  height:200px;
+  transition: transform .5s ease;
+}
+.card-img-top:hover{
+  transform: scale(1.1);
+}
+.card{
+  overflow: hidden;
+  position: relative;
+}.liked{
+  display:none;
+  width: 100px;
+  color: white;
+  position: absolute;
+  right: 10px;
+  bottom: 5px;
+  border-radius: 20px;
+}
+.card:hover{
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+}
+.col{
+  margin:0.5rem 0;
+}
+.col .fa-shopping-bag{
+  font-size: 22px;
+  font-weight: 600;
+  color: coral;
+}
+.btn:hover{
+  background-color: coral;
+  outline: none;
+  border:none;
+}.stars{
+  color:gold;
+  float:right;
+  font-size:25px;
+}
+.card .fa-heart{
+  color: #ff6347 !important;
+  float: right;
+}
+.btn:hover .fa-shopping-bag{
+  color: #1d1d1d;
+}.fa-heart:hover,.fa-heart:focus{
+  cursor: pointer;
+  color: coral;
+
+/* filter */
+}.filters span{
+  font-size: 25px;
+  font-weight: 700;
+  margin-right: 2rem;
+}
+.filters label{
+  padding-right: 1rem;
+  font-size: 20px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+#favoritesList {
+  display: none;
+  position: absolute;
+  max-height: 500px;
+  overflow-y: auto;
+  width: 350px;
+  z-index: 20;
+  top:92px;
+  right:0;
+  background-color: white;
+  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  animation: fadeIn 0.5s ease-in-out;
+}
+.close-icon{
+  float: right;
+  font-size: 25px;
+  color:coral;
+  cursor: pointer;
+  margin: 8px;
+  border-radius: 50%;
+  padding: 3px;
+}
+.close-icon:hover {
+  background-color: antiquewhite;}
+#favoritesList span{
+  margin: 8px;
+  font-size: 24px;
+}
+.favorite-item {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 10px;
+  justify-content:space-around;
+}
+.favorite-item img {
+  width: 60px;
+  height: 60px;
+  margin-right:10px;
+  
+}
+.delete, .buy{
+  width: 80px;
+  height: 30px;
+  padding:4px 7px;
+  margin-right: 3px;
+}
+/* start contact */
+.form-group input:hover,.form-group input:focus,textarea:hover,.form-control:focus{
+  box-shadow: 0 0 0 0;
+  border-color: coral!important;
+  outline: none;
+}
+input ,textarea{
+  transition: .15s ease-in-out;
+}
